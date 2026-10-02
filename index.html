@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+  />
+  <meta name="theme-color" content="#07111f" />
+  <title>08 • 10 • 2026 — For Rafay</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&family=Great+Vibes&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- AUDIO -->
+  <audio id="music" loop preload="auto">
+    <source src="music/we-fell-in-love-in-october.mp3" type="audio/mpeg" />
+  </audio>
+
+  <audio id="ambient" loop preload="auto">
+    <source src="music/ambient.mp3" type="audio/mpeg" />
+  </audio>
+
+  <!-- GLOBAL BACKGROUND -->
+  <div class="global-bg">
+    <div class="noise"></div>
+    <div class="stars stars-a"></div>
+    <div class="stars stars-b"></div>
+    <div class="moon"></div>
+    <div class="floating-hearts" id="floatingHearts"></div>
+    <div class="floating-balloons" id="floatingBalloons"></div>
+  </div>
+
+  <!-- TOP NAV -->
+  <header class="site-nav" id="siteNav">
+    <button class="nav-logo" data-go="0">
+      <span>08</span>
+      <i>•</i>
+      <span>10</span>
+      <i>•</i>
+      <span>26</span>
+    </button>
+
+    <nav class="desktop-nav">
+      <button data-go="2">Our Story</button>
+      <button data-go="8">Rafay</button>
+      <button data-go="17">Game</button>
+      <button data-go="21">Letter</button>
+      <button data-go="23">End</button>
+    </nav>
+
+    <button class="music-toggle" id="musicToggle" aria-label="Toggle music">
+      <span class="music-icon">♫</span>
+      <span class="music-label">music</span>
+    </button>
+
+    <button class="mobile-menu-button" id="mobileMenuButton">
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-inner">
+      <p class="menu-small">THE RAFAY ARCHIVE</p>
+      <button data-go="0">Beginning</button>
+      <button data-go="2">Our Story</button>
+      <button data-go="8">Rafay Museum</button>
+      <button data-go="17">Memory Game</button>
+      <button data-go="21">The Letter</button>
+      <button data-go="23">The End</button>
+    </div>
+  </div>
+
+  <!-- PROGRESS -->
+  <div class="page-progress" id="pageProgress">
+    <span id="progressNumber">01</span>
+    <span class="progress-line">
+      <span id="progressFill"></span>
+    </span>
+    <span>24</span>
+  </div>
+
+  <!-- PAGE CONTAINER -->
+  <main id="app">
+
+    <!-- 00 -->
+    <section class="page page-opening active" data-page="0">
+      <div class="opening-content">
+        <p class="eyebrow fade-up">08 • 10 • 2026</p>
+
+        <h1 class="opening-line" id="openingLine">
+          I made you something.
+        </h1>
+
+        <p class="opening-second" id="openingSecond">
+          Actually...
+        </p>
+
+        <button class="primary-button opening-button" id="enterButton">
+          <span>enter</span>
+          <b>→</b>
+        </button>
+      </div>
+    </section>
+
+    <!-- 01 -->
+    <section class="page page-october" data-page="1">
+      <div class="center-content">
+        <p class="eyebrow">THE MONTH THAT CHANGED EVERYTHING</p>
+
+        <div class="october-word">
+          <span>O</span>
+          <span>C</span>
+          <span>T</span>
+          <span>O</span>
+          <span>B</span>
+          <span>E</span>
+          <span>R</span>
+        </div>
+
+        <p class="hero-subtitle">
+          we fell in love in October.
+        </p>
+
+        <button class="text-button next-button" data-next>
+          let's go back <span>→</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- 02 -->
+    <section class="page story-page" data-page="2">
+      <div class="story-layout amphitheater-layout">
+        <div class="story-visual amphitheater-scene">
+          <div class="amphi-sky"></div>
+          <div class="amphi-moon"></div>
+          <div class="amphi-steps"></div>
+          <div class="person person-washam"></div>
+          <div class="person person-rafay"></div>
+          <div class="person person-murthaba"></div>
+        </div>
+
+        <div class="story-copy">
+          <p class="eyebrow">BEFORE US</p>
+          <h2>We didn't even know each other.</h2>
+
+          <p>
+            There was a party. We sat in the amphitheater.
+            Murthaba introduced us.
+          </p>
+
+          <p>
+            You were shy. Very shy.
+            Very sweet. Very introverted.
+          </p>
+
+          <p>
+            I sat right in front of you without knowing
+            that I'd see you again.
+          </p>
+
+          <p class="highlight-line">
+            Fate apparently had much bigger plans.
+          </p>
+
+          <button class="primary-button next-button" data-next>
+            next memory →
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03 -->
+    <section class="page" data-page="3">
+      <div class="page-heading">
+        <p class="eyebrow">CHAPTER ONE</p>
+        <h2>The first versions of us.</h2>
+        <p>
+          Before we knew what this was.
+        </p>
+      </div>
+
+      <div class="photo-strip first-photo-strip">
+        <button class="memory-photo" data-image="1" data-caption="I didn't know yet.">
+          <img src="images/1.jpeg" alt="Memory 1" />
+          <span>I didn't know yet.</span>
+        </button>
+
+        <button class="memory-photo tilted-up" data-image="2" data-caption="You were so shy.">
+          <img src="images/2.jpeg" alt="Memory 2" />
+          <span>You were so shy.</span>
+        </button>
+
+        <button class="memory-photo tilted-down" data-image="3" data-caption="Look at us.">
+          <img src="images/3.jpeg" alt="Memory 3" />
+          <span>Look at us.</span>
+        </button>
+
+        <button class="memory-photo" data-image="4" data-caption="Another lifetime.">
+          <img src="images/4.jpeg" alt="Memory 4" />
+          <span>Another lifetime.</span>
+        </button>
+      </div>
+
+      <button class="primary-button next-button centered-button" data-next>
+        keep going →
+      </button>
+    </section>
+
+    <!-- 04 -->
+    <section class="page" data-page="4">
+      <div class="split-page">
+        <div class="pizza-visual">
+          <div class="pizza-glow"></div>
+          <div class="pizza-plate">
+            <div class="pizza"></div>
+          </div>
+          <div class="pizza-crumb crumb-1"></div>
+          <div class="pizza-crumb crumb-2"></div>
+          <div class="pizza-crumb crumb-3"></div>
+        </div>
+
+        <div class="split-copy">
+          <p class="eyebrow">PALLADIUM</p>
+          <h2>The Pizza Olympics.</h2>
+
+          <p>
+            We had a fight.
+          </p>
+
+          <p class="small-note">
+            Not an actual fight.
+          </p>
+
+          <p class="big-line">
+            Who could finish the food first?
+          </p>
+
+          <div class="choice-row" id="pizzaChoices">
+            <button class="choice-button" data-pizza="washam">
+              Washam
+            </button>
+            <button class="choice-button" data-pizza="rafay">
+              Rafay
+            </button>
+          </div>
+
+          <div class="interaction-result" id="pizzaResult"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 05 -->
+    <section class="page" data-page="5">
+      <div class="lollipop-page">
+        <div class="lollipop-illustration">
+          <div class="stall"></div>
+          <div class="lollipop">
+            <span></span>
+          </div>
+        </div>
+
+        <div class="center-content">
+          <p class="eyebrow">THE INCIDENT</p>
+          <h2>The Lollipop Stick.</h2>
+
+          <p>
+            I had absolutely no authority to tell you
+            to remove it.
+          </p>
+
+          <p>
+            I still told you to remove it.
+          </p>
+
+          <button class="primary-button" id="lollipopButton">
+            ask him to remove it
+          </button>
+
+          <div class="interaction-result" id="lollipopResult"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 06 -->
+    <section class="page" data-page="6">
+      <div class="winter-page">
+        <div class="winter-ground">
+          <div class="winter-person one"></div>
+          <div class="winter-person two"></div>
+        </div>
+
+        <div class="winter-copy">
+          <p class="eyebrow">THE WINTER FILES</p>
+          <h2>We could talk forever.</h2>
+
+          <p>
+            We used to sit in the ground until 4 PM.
+          </p>
+
+          <p>
+            Somehow there was always another topic.
+          </p>
+
+          <div class="clock-wrapper">
+            <div class="clock" id="winterClock">
+              <div class="clock-center"></div>
+              <div class="clock-hand" id="clockHand"></div>
+              <span class="clock-number n1">1 PM</span>
+              <span class="clock-number n2">2 PM</span>
+              <span class="clock-number n3">3 PM</span>
+              <span class="clock-number n4">4 PM</span>
+            </div>
+          </div>
+
+          <p class="clock-message" id="clockMessage">
+            drag the clock
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 07 -->
+    <section class="page" data-page="7">
+      <div class="dog-page">
+        <div class="dog-stars"></div>
+
+        <div class="dog-copy">
+          <p class="eyebrow">A CONVERSATION I REMEMBER</p>
+
+          <h2>
+            You asked me about my future.
+          </h2>
+
+          <div class="dog-story">
+            <p>I said:</p>
+            <strong>“I'll buy a dog.”</strong>
+
+            <p>
+              And you immediately wanted to know which breed.
+            </p>
+
+            <p>
+              You looked at me with those sparkly eyes,
+              as if you already knew you were going to be
+              part of that future.
+            </p>
+          </div>
+
+          <p class="soft-ending">
+            Maybe you just really wanted to know what kind of dog I'd get.
+          </p>
+
+          <button class="primary-button next-button" data-next>
+            I remember your eyes →
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 08 -->
+    <section class="page museum-page" data-page="8">
+      <div class="page-heading">
+        <p class="eyebrow">AN ENTIRELY SERIOUS INSTITUTION</p>
+        <h2>The Rafay Museum.</h2>
+        <p>Admission: one birthday boy.</p>
+      </div>
+
+      <div class="museum-grid">
+        <button class="museum-card" data-museum="shirt">
+          <span class="museum-number">01</span>
+          <div class="museum-icon shirt-icon"></div>
+          <h3>The White Tee Collection</h3>
+          <p>Minimal. Clean. Somehow always works.</p>
+        </button>
+
+        <button class="museum-card" data-museum="messi">
+          <span class="museum-number">02</span>
+          <div class="museum-icon ball-icon">10</div>
+          <h3>The Messi Department</h3>
+          <p>Current status: still obsessed.</p>
+        </button>
+
+        <button class="museum-card" data-museum="sleep">
+          <span class="museum-number">03</span>
+          <div class="museum-icon sleep-icon">Zz</div>
+          <h3>The Sleeping Species</h3>
+          <p>Misses things. Never misses Washam.</p>
+        </button>
+
+        <button class="museum-card" data-museum="nose">
+          <span class="museum-number">04</span>
+          <div class="museum-icon">👃</div>
+          <h3>The Joyland Evidence</h3>
+          <p>A historic incident.</p>
+        </button>
+
+        <button class="museum-card" data-museum="gif">
+          <span class="museum-number">05</span>
+          <div class="museum-icon gif-icon">GIF</div>
+          <h3>The GIF Era</h3>
+          <p>He discovered them. Then never stopped.</p>
+        </button>
+
+        <button class="museum-card" data-museum="new">
+          <span class="museum-number">06</span>
+          <div class="museum-icon sparkle-icon">✦</div>
+          <h3>The New Thing Phenomenon</h3>
+          <p>New discovery → immediate obsession.</p>
+        </button>
+      </div>
+
+      <button class="primary-button next-button centered-button" data-next>
+        continue the investigation →
+      </button>
+    </section>
+
+    <!-- 09 -->
+    <section class="page" data-page="9">
+      <div class="paradox-page">
+        <div class="paradox-copy">
+          <p class="eyebrow">IMPORTANT SCIENTIFIC FINDINGS</p>
+          <h2>The Rafay Paradox.</h2>
+
+          <div class="paradox-stat">
+            <span>Indecisiveness</span>
+            <strong>99.8%</strong>
+          </div>
+
+          <div class="paradox-stat">
+            <span>Trusting Washam's choices</span>
+            <strong>100%</strong>
+          </div>
+
+          <div class="paradox-stat">
+            <span>Good drinks anyway</span>
+            <strong>∞</strong>
+          </div>
+
+          <p class="paradox-text">
+            You cannot choose a drink.
+            I choose one for you.
+            It is somehow always good.
+          </p>
+
+          <button class="primary-button" id="drinkButton">
+            choose Rafay's drink
+          </button>
+
+          <div class="drink-result" id="drinkResult"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10 -->
+    <section class="page" data-page="10">
+      <div class="language-page">
+        <p class="eyebrow">OUR PRIVATE DICTIONARY</p>
+        <h2>The Language of Us.</h2>
+
+        <p class="dictionary-intro">
+          Somehow, we developed an entire language.
+        </p>
+
+        <div class="word-cloud">
+          <button data-word="chaddi">chaddi</button>
+          <button data-word="taaki">taaki</button>
+          <button data-word="toliya">toliya</button>
+          <button data-word="nicker">nicker</button>
+          <button data-word="shampoo">shampoo</button>
+          <button data-word="goo">goo goo ga ga</button>
+        </div>
+
+        <div class="word-definition" id="wordDefinition">
+          <span>tap a word</span>
+        </div>
+
+        <button class="primary-button next-button centered-button" data-next>
+          next →
+        </button>
+      </div>
+    </section>
+
+    <!-- 11 -->
+    <section class="page" data-page="11">
+      <div class="things-page">
+        <div class="page-heading">
+          <p class="eyebrow">THE LITTLE THINGS</p>
+          <h2>Things that are very us.</h2>
+        </div>
+
+        <div class="things-grid">
+          <div class="thing-card">
+            <span>01</span>
+            <h3>Holding hands.</h3>
+          </div>
+
+          <div class="thing-card">
+            <span>02</span>
+            <h3>Talking about absolutely anything.</h3>
+          </div>
+
+          <div class="thing-card">
+            <span>03</span>
+            <h3>“Time kam hai.”</h3>
+          </div>
+
+          <div class="thing-card">
+            <span>04</span>
+            <h3>Recommending each other food.</h3>
+          </div>
+
+          <div class="thing-card">
+            <span>05</span>
+            <h3>Jamming on Spotify.</h3>
+          </div>
+
+          <div class="thing-card">
+            <span>06</span>
+            <h3>Watching movies on Rave.</h3>
+          </div>
+
+          <div class="thing-card">
+            <span>07</span>
+            <h3>Losing Reversi.</h3>
+          </div>
+
+          <div class="thing-card">
+            <span>08</span>
+            <h3>Not letting each other sleep.</h3>
+          </div>
+
+          <div class="thing-card">
+            <span>09</span>
+            <h3>Being broke but having fun anyway.</h3>
+          </div>
+
+          <div class="thing-card">
+            <span>10</span>
+            <h3>Remembering each other whenever something good happens.</h3>
+          </div>
+        </div>
+
+        <button class="primary-button next-button centered-button" data-next>
+          there's more →
+        </button>
+      </div>
+    </section>
+
+    <!-- 12 -->
+    <section class="page karachi-page" data-page="12">
+      <div class="karachi-content">
+        <p class="eyebrow">THE KARACHI FILE</p>
+
+        <h2>Some memories aren't funny.</h2>
+
+        <p>
+          They're just precious.
+        </p>
+
+        <div class="karachi-reveal" id="karachiReveal">
+          <button class="soft-button" id="karachiButton">
+            open this memory
+          </button>
+        </div>
+
+        <div class="karachi-text" id="karachiText">
+          <p>
+            You were in Karachi.
+          </p>
+
+          <p>
+            You cried over your health.
+          </p>
+
+          <p>
+            And all I wanted was to go hug you immediately.
+          </p>
+
+          <p class="highlight-line">
+            I love you when you're honest.
+            When you're vulnerable.
+            When you don't have to pretend you're okay with me.
+          </p>
+        </div>
+
+        <button class="primary-button next-button" data-next>
+          next →
+        </button>
+      </div>
+    </section>
+
+    <!-- 13 -->
+    <section class="page sand-page" data-page="13">
+      <div class="sand-background">
+        <div class="sand-name">R + W</div>
+        <div class="wave"></div>
+      </div>
+
+      <div class="sand-content">
+        <p class="eyebrow">ONE OF MY FAVORITE LITTLE THINGS</p>
+
+        <h2>You wrote our name in the sand.</h2>
+
+        <p>
+          The waves could erase it.
+        </p>
+
+        <p>
+          I still remember.
+        </p>
+
+        <button class="primary-button next-button" data-next>
+          keep going →
+        </button>
+      </div>
+    </section>
+
+    <!-- 14 -->
+    <section class="page distance-page" data-page="14">
+      <div class="distance-content">
+        <p class="eyebrow">DISTANCE</p>
+        <h2>Still us.</h2>
+
+        <div class="distance-map">
+          <div class="location-dot left">
+            <span>you</span>
+          </div>
+          <div class="location-line"></div>
+          <div class="location-dot right">
+            <span>me</span>
+          </div>
+        </div>
+
+        <div class="distance-lines">
+          <p>Still staying in contact.</p>
+          <p>Still checking in.</p>
+          <p>Still worrying.</p>
+          <p>Still thinking of each other.</p>
+        </div>
+
+        <button class="primary-button next-button" data-next>
+          next →
+        </button>
+      </div>
+    </section>
+
+    <!-- 15 -->
+    <section class="page food-page" data-page="15">
+      <div class="food-content">
+        <p class="eyebrow">A SCIENTIFICALLY VERIFIED FACT</p>
+
+        <h2>We've never had a bad meal together.</h2>
+
+        <div class="food-score">
+          <span>BAD MEALS</span>
+          <strong>0</strong>
+        </div>
+
+        <div class="food-score">
+          <span>GOOD MEALS</span>
+          <strong>∞</strong>
+        </div>
+
+        <div class="food-cards">
+          <button class="food-card">
+            <img src="images/5.jpeg" alt="Food memory" />
+            <span>recommended by him</span>
+          </button>
+
+          <button class="food-card">
+            <img src="images/6.jpeg" alt="Food memory" />
+            <span>recommended by me</span>
+          </button>
+
+          <button class="food-card">
+            <img src="images/7.jpeg" alt="Food memory" />
+            <span>somehow both approved</span>
+          </button>
+        </div>
+
+        <button class="primary-button next-button" data-next>
+          next →
+        </button>
+      </div>
+    </section>
+
+    <!-- 16 -->
+    <section class="page call-page" data-page="16">
+      <div class="phone-scene">
+        <div class="phone">
+          <div class="phone-top">
+            <span>rafay ♡ wash am</span>
+            <span>●</span>
+          </div>
+
+          <div class="phone-time" id="callTimer">
+            00:00:00
+          </div>
+
+          <div class="phone-status">
+            still talking...
+          </div>
+
+          <button class="call-button" id="callButton">
+            <span>⌕</span>
+          </button>
+        </div>
+
+        <div class="call-copy">
+          <p class="eyebrow">THE 12 HOUR CALL</p>
+          <h2>Apparently we had things to discuss.</h2>
+          <p>
+            We stayed on call for more than 12 hours.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 17 -->
+    <section class="page quiz-page" data-page="17">
+      <div class="quiz-content">
+        <p class="eyebrow">NO CHEATING</p>
+        <h2>How well do you know us?</h2>
+
+        <div class="quiz-card" id="quizCard">
+          <div class="quiz-count" id="quizCount">01 / 05</div>
+          <h3 id="quizQuestion"></h3>
+          <div class="quiz-options" id="quizOptions"></div>
+          <div class="quiz-feedback" id="quizFeedback"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 18 -->
+    <section class="page roulette-page" data-page="18">
+      <div class="roulette-content">
+        <p class="eyebrow">RANDOM ACCESS MEMORY</p>
+
+        <h2>Remember something.</h2>
+
+        <div class="roulette-display" id="rouletteDisplay">
+          <span>click the button</span>
+        </div>
+
+        <button class="primary-button huge-button" id="rouletteButton">
+          <span>REMEMBER</span>
+          <b>↻</b>
+        </button>
+
+        <p class="roulette-note">
+          You never know what you're going to get.
+        </p>
+      </div>
+    </section>
+
+    <!-- 19 -->
+    <section class="page hidden-things-page" data-page="19">
+      <div class="hidden-content">
+        <p class="eyebrow">LOOK CLOSER</p>
+        <h2>There are things hidden here.</h2>
+        <p>
+          Not everything on this website is decoration.
+        </p>
+
+        <div class="hidden-room">
+          <button class="hidden-object heart-object" data-secret="heart">♡</button>
+          <button class="hidden-object star-object" data-secret="star">✦</button>
+          <button class="hidden-object balloon-object" data-secret="balloon">○</button>
+          <button class="hidden-object cassette-object" data-secret="cassette">▣</button>
+        </div>
+
+        <div class="hidden-message" id="hiddenMessage">
+          <span>Maybe click around.</span>
+        </div>
+
+        <button class="primary-button next-button" data-next>
+          continue →
+        </button>
+      </div>
+    </section>
+
+    <!-- 20 -->
+    <section class="page password-page" data-page="20">
+      <div class="password-content">
+        <div class="classified-stamp">CLASSIFIED</div>
+
+        <p class="eyebrow">SUBJECT: RAFAY ALI</p>
+
+        <h2>Access restricted.</h2>
+
+        <p>
+          One password required.
+        </p>
+
+        <label class="password-field">
+          <span>password</span>
+          <input
+            id="passwordInput"
+            type="password"
+            autocomplete="off"
+            placeholder="••••••"
+          />
+        </label>
+
+        <button class="primary-button" id="passwordButton">
+          unlock file
+        </button>
+
+        <div class="password-feedback" id="passwordFeedback"></div>
+      </div>
+    </section>
+
+    <!-- 21 -->
+    <section class="page letter-page" data-page="21">
+      <div class="letter-content">
+        <p class="eyebrow">FILE UNLOCKED</p>
+
+        <div class="letter-paper">
+          <div class="letter-date">08 • 10 • 2026</div>
+
+          <h2>Rafayyyyyyyyyyyyyyyy, meri jaaaaaaaaaaan.</h2>
+
+          <p>
+            I love you soooo freakin' much.
+          </p>
+
+          <p>
+            Hum baar baar kehte hain agar customize bhi karte,
+            tab bhi aap jaisa insaan na milta.
+          </p>
+
+          <p>
+            Every single day I fall in love with you more and moreee.
+          </p>
+
+          <p>
+            You are the best thing that has everr happened to me.
+          </p>
+
+          <p>
+            You have given and shown me a world so beautiful
+            and it exists only with you.
+          </p>
+
+          <p>
+            I love you so freaking muchieeeeeee.
+          </p>
+
+          <p>
+            The way we have never judged each other and have
+            felt sooooo safeeeeeeeeeeeee together.
+          </p>
+
+          <p>
+            I can say with absolute pride that every single day
+            that I spend with you is 10/10.
+          </p>
+
+          <p>
+            Literally har ek dinnnnnnn.
+          </p>
+
+          <p>
+            Jab jab hum sath the aur hoonge, Insha'Allah.
+          </p>
+
+          <p class="letter-final">
+            Jaldi jaldi halal mode me ana hay hehe.
+          </p>
+
+          <div class="letter-signature">
+            forever yours,<br />
+            Washam ♡
+          </div>
+        </div>
+
+        <button class="primary-button next-button" data-next>
+          one more thing →
+        </button>
+      </div>
+    </section>
+
+    <!-- 22 -->
+    <section class="page universe-page" data-page="22">
+      <div class="universe-content">
+        <p class="eyebrow">ANOTHER UNIVERSE</p>
+        <h2>What if we met somewhere else?</h2>
+
+        <div class="universe-options">
+          <button data-universe="earlier">
+            <span>01</span>
+            We met earlier.
+          </button>
+
+          <button data-universe="elsewhere">
+            <span>02</span>
+            We met somewhere else.
+          </button>
+
+          <button data-universe="never">
+            <span>03</span>
+            We never met.
+          </button>
+        </div>
+
+        <div class="universe-result" id="universeResult"></div>
+      </div>
+    </section>
+
+    <!-- 23 -->
+    <section class="page final-page" data-page="23">
+      <div class="final-stars"></div>
+
+      <div class="final-content">
+        <p class="eyebrow">THE END</p>
+
+        <div class="final-sequence" id="finalSequence">
+          <p>So...</p>
+          <p>I don't think I ever needed to find someone perfect.</p>
+          <p>I just needed to find you.</p>
+        </div>
+
+        <div class="final-date">
+          08 • 10 • 2026
+        </div>
+
+        <h1>Happy Birthday, meri jaan.</h1>
+
+        <p class="final-last">
+          I'm really, really glad it was you.
+        </p>
+
+        <div class="final-photo">
+          <img src="images/8.jpeg" alt="Us" />
+        </div>
+
+        <button class="restart-button" id="restartButton">
+          ↻ experience again
+        </button>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- PHOTO MODAL -->
+  <div class="modal" id="photoModal">
+    <button class="modal-close">×</button>
+
+    <div class="modal-photo">
+      <img id="modalImage" src="" alt="" />
+    </div>
+
+    <p id="modalCaption"></p>
+  </div>
+
+  <!-- MUSEUM MODAL -->
+  <div class="modal museum-modal" id="museumModal">
+    <button class="modal-close">×</button>
+
+    <div class="museum-modal-content">
+      <p class="eyebrow" id="museumEyebrow"></p>
+      <h2 id="museumTitle"></h2>
+      <p id="museumText"></p>
+    </div>
+  </div>
+
+  <!-- SECRET MODAL -->
+  <div class="modal secret-modal" id="secretModal">
+    <button class="modal-close">×</button>
+    <div class="secret-modal-content">
+      <span class="secret-symbol">♡</span>
+      <h2 id="secretTitle"></h2>
+      <p id="secretText"></p>
+    </div>
+  </div>
+
+  <!-- CUSTOM CURSOR -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
