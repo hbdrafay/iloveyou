@@ -296,7 +296,7 @@ pizzaButtons.forEach(button => {
         "Correct. Unfortunately. 😭";
     } else {
       pizzaResult.innerHTML =
-        "Girl... you know that's not what happened.";
+        "MAYN... you know that's not what happened.";
     }
 
     pizzaButtons.forEach(btn => {
